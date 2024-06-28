@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: bluered
-#---
-#apiVersion: v1
-#kind: ConfigMap
-#metadata:
-#  name: config-color
-#  namespace: bluered
-#data:
-#  X: '1'
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-color
+  namespace: bluered
+data:
+  X: '1'
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -30,7 +30,7 @@ spec:
         app: bluered
     spec:
       containers:
-      - image: orhaz/bluered:v1.0
+      - image: nirmiz/bluered:latest
         name: bluered
         resources: {}
         envFrom:
