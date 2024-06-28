@@ -2,11 +2,17 @@ This Terraform configuration sets up an AWS infrastructure for an EKS (Elastic K
 
 These include:
 • VPC (eks-vpc) - using the terraform-aws-modules/vpc/aws module from the Terraform Registry.
+
 • EKS Cluster - kubernetes
+
 • Node group - in order to create that we iterate over a variable called var.node_groups and use the object list inside. this variable can easily contain more nodes if desired.
+
 • Container repository (ECR) called pythontestapp.
+
 • We're using an S3 Remote Backend for the state file.
+
 • 41 objects should be created once hitting apply. Please use "terraform plan" before to review.
+
 
 Actions needed from the end user before usage:
 
