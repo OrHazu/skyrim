@@ -47,7 +47,7 @@ resource "kubernetes_deployment" "bluered" {
       spec {
         container {
           name  = "bluered"
-          image = "orhaz/bluered:v1.0"
+          image = "orhaz/bluered:v1.1"
 
 #           env_from {
 #             config_map_ref {
