@@ -29,4 +29,5 @@ And you're done! within your AWS console, find the load balancer that was creatd
 This should show you a simple webpage.
 
 If you wish to use the EKS context locally, please use the following command, and fill in for the details:
+
 aws eks --region $AWS_REGION update-kubeconfig --name $EKS_CLUSTER_NAME --kubeconfig $KUBECONFIG_PATH --profile $AWS_PROFILE
