@@ -5,18 +5,6 @@ resource "kubernetes_namespace" "bluered" {
   }
 }
 
-# # Define the ConfigMap
-# resource "kubernetes_config_map" "config_color" {
-#   metadata {
-#     name      = "config-color"
-#     namespace = kubernetes_namespace.bluered.metadata[0].name
-#   }
-#
-#   data = {
-#     X = "1"
-#   }
-# }
-
 # Define the Deployment
 resource "kubernetes_deployment" "bluered" {
   metadata {
@@ -48,13 +36,6 @@ resource "kubernetes_deployment" "bluered" {
         container {
           name  = "bluered"
           image = "orhaz/bluered:v1.1"
-
-#           env_from {
-#             config_map_ref {
-#               name = kubernetes_config_map.config_color.metadata[0].name
-#             }
-#           }
-
           resources {}
         }
       }
