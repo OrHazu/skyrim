@@ -24,6 +24,7 @@ Actions needed in order to deploy the app:
 1. Go to the TF directory, run 'terraform init',
 2. 'terraform plan', review the infrastructure.
 3. terraform apply
+4. 44 Objects should be created after hitting apply.
 
 And you're done! within your AWS console, find the load balancer that was created (k8s.tf), copy the DNS and paste it into your browser.
 This should show you a simple webpage.
