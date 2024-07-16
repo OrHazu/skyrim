@@ -9,7 +9,7 @@ terraform {
     bucket  = "tf-state-hazut"
     key     = "terraform.tfstate"
     region  = "eu-west-1"
-    profile = "OrHaz"
+    profile =  "OrHaz"
   }
 }
 
