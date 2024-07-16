@@ -30,12 +30,10 @@ spec:
         app: bluered
     spec:
       containers:
-      - image: nirmiz/bluered:latest
+      - image: orhaz/bluered:v1.1
         name: bluered
         resources: {}
-        envFrom:
-          - configMapRef:
-              name: config-color
+
 ---
 apiVersion: v1
 kind: Service
